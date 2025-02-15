@@ -1,0 +1,14 @@
+[build]
+  publish = "frontend/build"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[plugins]]
+  package = "@netlify/plugin-supabase-auth"
+    [plugins.inputs]
+    supabaseUrl = "https://xyzcompany.supabase.co"
+    supabaseKey = "public-anon-key"
